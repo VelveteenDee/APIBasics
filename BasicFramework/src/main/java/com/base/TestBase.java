@@ -63,7 +63,7 @@ public class TestBase
 		httpRequest.header("Content-Type","application/json");					
 		httpRequest.body(requestParam.toJSONString());				
 		log("Base URI :"+RestAssured.baseURI+Value);
-		Response httpResponse = httpRequest.request(Method.POST,Value);
+		//Response httpResponse = httpRequest.request(Method.POST,Value);
 		log("HTTP response created");
 		return httpResponse;
 		
@@ -74,11 +74,11 @@ public class TestBase
 		httpRequest.header("Content-Type","application/json");
 		JSONObject json=new JSONObject();
 		json.put("salary", "700");
-		json.put("name", "madhur bharadwaj");
+		json.put("name", "Deee");
 		json.put("age", "26");	
 		httpRequest.body(json.toJSONString());		
 		log("Base URI :"+RestAssured.baseURI+Value);
-		Response httpResponse = httpRequest.request(Method.PUT,Value);
+		//Response httpResponse = httpRequest.request(Method.PUT,Value);
 		log("HTTP response created");
 		return httpResponse;
 		
